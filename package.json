@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ssr": "webpack -p && webpack --config webpack.config.server.js && node dist/server.js"
+    "ssr": "ng build --prod && webpack --config webpack.config.server.js && node dist/server.js"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +44,7 @@
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.2.0"
+    "typescript": "~2.2.0",
+    "webpack": "^2.3.2"
   }
 }
