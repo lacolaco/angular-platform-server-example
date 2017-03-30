@@ -36,7 +36,7 @@ module.exports = {
   },
   "entry": {
     "main": [
-      "./src/main.ts"
+      "./src/main.browser.ts"
     ],
     "polyfills": [
       "./src/polyfills.ts"
@@ -283,7 +283,7 @@ module.exports = {
       }
     }),
     new AotPlugin({
-      "mainPath": "main.ts",
+      "entryModule": "app/app.module#AppModule",
       "hostReplacementPaths": {
         "environments/environment.ts": "environments/environment.ts"
       },
