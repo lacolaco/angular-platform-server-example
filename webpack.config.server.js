@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const ngtools = require('@ngtools/webpack');
 const path = require('path');
 
@@ -15,13 +16,19 @@ module.exports = {
   },
   plugins: [
     new ngtools.AotPlugin({
-      "entryModule": "app/app.module#AppModule",
+      "entryModule": "app/app.module.server#AppServerModule",
       "hostReplacementPaths": {
         "environments/environment.ts": "environments/environment.ts"
       },
       "exclude": [],
       "tsConfigPath": "src/tsconfig.app.json",
       "skipCodeGeneration": true
+    }),
+    new webpack.LoaderOptionsPlugin({
+         // test: /\.xxx$/, // may apply this only for some modules
+         options: {
+           postcss: {}
+         }
     })
   ],
   module: {
@@ -42,5 +49,5 @@ module.exports = {
         ],
       }
     ]
-  }
+  },
 }

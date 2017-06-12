@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 
 @NgModule({
     imports: [
-        ServerModule,
         AppModule,
+        ServerModule, // Import after AppModule! (override browser things)
         AppShellModule.prerender(),
     ],
     bootstrap: [
