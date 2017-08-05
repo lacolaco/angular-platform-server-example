@@ -21,8 +21,32 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      },
+      "baseHref": "/angular-plarform-server-example/"
+    },
+    {
+      "root": "src",
+      "outDir": "dist-server",
+      "platform": "server",
+      "assets": [
+        "assets",
+        "favicon.ico"
       ],
+      "index": "index.html",
+      "main": "main.server.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.server.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -53,7 +77,6 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {
-    }
+    "component": {}
   }
 }
